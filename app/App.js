@@ -1,13 +1,13 @@
 import { AuthController } from './controllers/AuthController.js';
 import { router } from './router-config.js';
-const USE_ROUTER = false
+const USE_ROUTER = true
 
 class App {
 
   AuthController = new AuthController()
-  
+
   constructor() {
-    if(USE_ROUTER){
+    if (USE_ROUTER) {
       this.router = router
       this.router.init(this)
     }
