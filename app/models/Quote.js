@@ -8,11 +8,11 @@ export class Quote {
 
     get quoteHTMLTemplate() {
         return /*html*/ `
-        <div class="col-8">
-            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus exercitationem aperiam doloribus odit, optio voluptatum excepturi modi porro debitis quo."</p>
+        <div class="col-12">
+            <p>${this.content}</p>
         </div>
-        <div class="col-5">
-            <p>Author</p>
+        <div class="col-5 pb-5">
+            <p>${this.author}</p>
         </div>
         `
     }

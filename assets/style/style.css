@@ -20,3 +20,13 @@ body {
   height: 100vh;
   object-fit: cover;
 }
+
+.quote-formatting {
+  text-shadow: 2px 2px 4px black;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.161);
+  border-radius: 5px;
+  margin-bottom: 4em;
+  padding-top: 1em;
+  padding-left: 1em;
+}
