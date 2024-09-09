@@ -8,10 +8,10 @@ export class Quote {
 
     get quoteHTMLTemplate() {
         return /*html*/ `
-        <div class="col-12">
+        <div class="col-12 unhide-author">
             <p>${this.content}</p>
         </div>
-        <div class="col-5 pb-5">
+        <div class="col-5 pb-5 hide">
             <p>${this.author}</p>
         </div>
         `

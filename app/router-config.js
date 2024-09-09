@@ -4,12 +4,13 @@ import { HomeController } from "./controllers/HomeController.js";
 import { AuthGuard } from "./services/AuthService.js";
 import { Router } from "./utils/Router.js";
 import { QuotesController } from "./controllers/QuotesController.js";
+import { WeatherController } from "./controllers/WeatherController.js";
 
 
 export const router = new Router([
   {
     path: '',
-    controllers: [HomeController, bgImagesController, QuotesController],
+    controllers: [HomeController, bgImagesController, QuotesController, WeatherController],
     view: ``
   },
   {
