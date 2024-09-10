@@ -18,6 +18,12 @@ class ObservableAppState extends EventEmitter {
 
   /**@type {Weather} */
   weather = null
+
+  /**@type {ToDo} */
+
+  todo = null
+
+
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())

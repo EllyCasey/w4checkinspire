@@ -5,12 +5,13 @@ import { AuthGuard } from "./services/AuthService.js";
 import { Router } from "./utils/Router.js";
 import { QuotesController } from "./controllers/QuotesController.js";
 import { WeatherController } from "./controllers/WeatherController.js";
+import { ClockController } from "./controllers/ClockController.js";
 
 
 export const router = new Router([
   {
     path: '',
-    controllers: [HomeController, bgImagesController, QuotesController, WeatherController],
+    controllers: [HomeController, bgImagesController, QuotesController, WeatherController, ClockController],
     view: ``
   },
   {

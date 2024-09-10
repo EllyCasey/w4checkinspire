@@ -10,7 +10,7 @@ export class Weather {
     get weatherHTMLTemplate() {
         return /*html*/ `
             <div>
-                <p><i class="mdi mdi-weather-partly-snowy-rainy"></i>${this.tempHover}</p>
+                <p onclick='app.WeatherController.hoverTempDisplay()'><i class="mdi mdi-weather-partly-snowy-rainy"></i>${this.tempHover}</p>
             </div>
         `
     }
@@ -18,8 +18,8 @@ export class Weather {
 
     get degreesFahrenheit() {
         return `${((this.temp - 273.15) * (9 / 5) + 32).toFixed(0)}° F`
-    }
 
+    }
     get degreesCelsius() {
         return `${(this.temp - 273.15).toFixed(0)}° C`
     }
