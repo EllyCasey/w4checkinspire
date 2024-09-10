@@ -8,25 +8,12 @@ export class ToDo {
 
     getToDoHTMLTemplate() {
         return /*html*/ `
-        <div class="row justify-content-end">
-        <div class="col-4 pb-5 pe-5 todo-card">
-          <h3 class="pb-2">To Do:</h3>
-  
-          <div>
-            <form class="user-form pb-2">
-              <textarea name="todo-list" id="todo-list" rows="2" cols="30" minlength="2" maxlength="50"></textarea>
-              <br>
-              <button class="btn btn-dark"><i class="mdi mdi-plus"></i></button>
-            </form>
-          </div>
-  
-    <!-- NOTE this is the section for the to do list -->
-  
-  
-          <div class="form-check pt-2">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">User To Do items go here</label>
-          </div>
+        <div class="col-12 mb-2">
+        <div class="form-check d-flex align-items-center">
+          <input onchange="app.ToDosController.toggleToDo('${this.id}')" class="form-check-input me-2" type="checkbox" id="${this.id}CheckBox" ${this.completed ? 'checked' : ''}>
+          <label class="form-check-label ${this.completed ? 'text-decoration-line-through' : ''}" for="${this.id}CheckBox">
+            ${this.content}
+          </label>
         </div>
       </div>
         `
